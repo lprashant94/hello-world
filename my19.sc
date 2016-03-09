@@ -7,7 +7,9 @@ import  ord._
 def isort[T](xs:List[T],x:T)(implicit ord:Ord[T]):List[T] = xs match{
   case Nil => x::Nil
   case head::tail if ord.lt(x,head) => x::xs
-  case 
+  case xs =>xs.head:: isort(xs.t,x)
+
+
 
 }
 
